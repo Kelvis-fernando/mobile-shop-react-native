@@ -8,11 +8,11 @@ const Navbar = () => {
   return (
     <View style={navbar.container}>
       <ButtonIcon>
-        <Icon name="done" color={Colors.black} />
+        <Icon raised name="done" color={Colors.black} />
       </ButtonIcon>
       <ButtonPlus title="+" />
       <ButtonIcon>
-        <Icon name="edit" color={Colors.black} />
+        <Icon raised name="edit" color={Colors.black} />
       </ButtonIcon>
     </View>
   );
