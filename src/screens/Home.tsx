@@ -2,6 +2,7 @@ import { Button, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import Colors from "../colors";
 import { globalStyles } from "../styles/global";
+import Navbar from "../components/Navbar";
 
 const Home = ({ navigation }: any) => {
   return (
@@ -11,6 +12,7 @@ const Home = ({ navigation }: any) => {
         title="Go to Details"
         onPress={() => navigation.navigate("Details")}
       />
+      <Navbar />
       <StatusBar style="auto" />
     </View>
   );
