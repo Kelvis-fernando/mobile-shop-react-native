@@ -4,11 +4,15 @@ import Colors from "../colors";
 import { task } from "../styles/components/task";
 
 interface TaskProps {
-  typesOfTask: "developer" | "design" | "daily";
+  data: {
+    title: string;
+    date: string;
+    typesOfTask: string;
+  };
 }
 
-const Task = ({ typesOfTask = "developer" }: TaskProps) => {
-  const validateTypesOfTask = () => {
+const Task = ({ data }: TaskProps) => {
+  const validateTypesOfTask = (typesOfTask: string) => {
     switch (typesOfTask) {
       case "developer":
         return <Icon raised reverse name="code" color={Colors.orange} />;
@@ -21,12 +25,10 @@ const Task = ({ typesOfTask = "developer" }: TaskProps) => {
 
   return (
     <View style={task.container}>
-      {validateTypesOfTask()}
+      {validateTypesOfTask(data.typesOfTask)}
       <View>
-        <Text style={{ fontSize: 16, fontWeight: "bold" }}>
-          Criar componente de serch
-        </Text>
-        <Text style={{ fontSize: 14 }}>data</Text>
+        <Text style={{ fontSize: 16, fontWeight: "bold" }}>{data.title}</Text>
+        <Text style={{ fontSize: 14 }}>{data.date}</Text>
       </View>
       <Icon name="chevron-right" color={Colors.black} />
     </View>

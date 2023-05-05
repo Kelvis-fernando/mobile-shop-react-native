@@ -5,6 +5,38 @@ import Navbar from "../components/Navbar";
 import Task from "../components/Task";
 
 const Home = () => {
+  const mock = [
+    {
+      typesOfTask: "developer",
+      title: "Criar componente de serch",
+      date: "01/06/2023",
+    },
+    {
+      typesOfTask: "design",
+      title: "Criar componente de serch",
+      date: "01/06/2023",
+    },
+    {
+      typesOfTask: "daily",
+      title: "Criar componente de serch",
+      date: "01/06/2023",
+    },
+    {
+      typesOfTask: "daily",
+      title: "Criar componente de serch",
+      date: "01/06/2023",
+    },
+    {
+      typesOfTask: "developer",
+      title: "Criar componente de serch",
+      date: "01/06/2023",
+    },
+    {
+      typesOfTask: "developer",
+      title: "Criar componente de serch",
+      date: "01/06/2023",
+    },
+  ];
   return (
     <View style={globalStyles.container}>
       <View style={globalStyles.titlePageContainer}>
@@ -12,18 +44,9 @@ const Home = () => {
       </View>
       <View style={{ height: "80%", marginTop: 90 }}>
         <ScrollView>
-          <Task typesOfTask={"developer"} />
-          <Task typesOfTask={"design"} />
-          <Task typesOfTask={"daily"} />
-          <Task typesOfTask={"daily"} />
-          <Task typesOfTask={"developer"} />
-          <Task typesOfTask={"developer"} />
-          <Task typesOfTask={"developer"} />
-          <Task typesOfTask={"developer"} />
-          <Task typesOfTask={"developer"} />
-          <Task typesOfTask={"developer"} />
-          <Task typesOfTask={"developer"} />
-          <Task typesOfTask={"developer"} />
+          {mock.map((task) => (
+            <Task data={task} />
+          ))}
         </ScrollView>
       </View>
       <Navbar />
