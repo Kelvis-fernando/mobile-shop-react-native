@@ -17,7 +17,7 @@ const Task = ({ data }: TaskProps) => {
       case "developer":
         return <Icon raised reverse name="code" color={Colors.orange} />;
       case "design":
-        return <Icon raised reverse name="movie_edit" color={Colors.orange} />;
+        return <Icon raised reverse name="drafts" color={Colors.orange} />;
       case "daily":
         return <Icon raised reverse name="event" color={Colors.orange} />;
     }
