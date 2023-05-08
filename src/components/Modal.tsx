@@ -15,21 +15,19 @@ const ModalMobile = ({
   children,
 }: ModalMovileProps) => {
   return (
-    <View>
-      <Modal visible={isVisible} animationType="slide" transparent>
-        <View style={stylesModal.modalBackground}>
-          <View style={stylesModal.modalContent}>
-            <TouchableOpacity
-              style={stylesModal.closeModal}
-              onPress={() => setIsVisible(false)}
-            >
-              <Icon name="close" />
-            </TouchableOpacity>
-            {children}
-          </View>
+    <Modal visible={isVisible} animationType="slide" transparent>
+      <View style={stylesModal.modalBackground}>
+        <View style={stylesModal.modalContent}>
+          <TouchableOpacity
+            style={stylesModal.closeModal}
+            onPress={() => setIsVisible(false)}
+          >
+            <Icon name="close" />
+          </TouchableOpacity>
+          {children}
         </View>
-      </Modal>
-    </View>
+      </View>
+    </Modal>
   );
 };
 export default ModalMobile;
